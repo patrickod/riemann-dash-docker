@@ -8,4 +8,7 @@ RUN gem install riemann-dash
 
 EXPOSE 4567
 
-CMD ["riemann-dash"]
+RUN mkdir /etc/riemann
+ADD ./config.rb /etc/riemann/riemann-dash-config.rb
+
+CMD ["riemann-dash", "/etc/riemann/riemann-dash-config.rb"]
