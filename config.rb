@@ -1,6 +1,6 @@
 # Serve HTTP traffic on this port
 set  :port, 4567
-set  :host, 0.0.0.0
+set  :host, "0.0.0.0"
 
 riemann_base = '.'
 riemann_src = "#{riemann_base}/lib/riemann/dash"
